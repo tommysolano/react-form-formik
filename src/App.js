@@ -1,5 +1,7 @@
 import { Formik, Form, Field, ErrorMessage } from "formik"
 import TextInput from "./components/TextInput"
+import Checkbox from "./components/Checkbox"
+
 
 const validate = (values) => {
   const errors = {}
@@ -44,6 +46,9 @@ function App() {
         <Field type="email" name="email"/>
         <ErrorMessage name="email" />
         <br />
+        <Checkbox name="accept">
+          Aceptar terminos y condiciones
+        </Checkbox>
         <button type="submit">Enviar</button>
       </Form>
     </Formik>
